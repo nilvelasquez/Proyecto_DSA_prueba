@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<script>$(document).ready(function (){
+    verificarSesion();
+})</script>
+<head>
+    <title>Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="javaScriptDocumento.js"></script>
+    <style>
+        .table {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="button" type="button" class="button" onclick=listadeObjetos()>Cargar Lista</button>
+    </div>
+    <br>
+    <div class="col-sm-8">
+        <br>
+        <div class="container">
+            <h1>Lista de objetos</h1>
+            <br>
+            <br>
+            <table class="table table-dark table-striped jumbotron jumbotron-fluid bg-dark text-warning " id="tabla">
+                <!Esta es la cabecera de la tabla.>
+                <thead>
+                <tr>
+                    <th id="Nombre">Nombre</th>
+                    <th id="descripcion">Descripción</th>
+                    <th id="precio">Precio</th>
+                </tr>
+                </thead>
+                <!Aquí va la info que se vera dentro de la tabla.>
+                <tbody id="tcuerpo">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <button id="button2" type="button" class="button" onclick=cerrarSession()>Cerrar Sesión</button>
+    </div>
+</body>
