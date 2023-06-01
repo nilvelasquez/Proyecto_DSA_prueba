@@ -1,3 +1,23 @@
+/*function redirigirALogin() {
+    if (window.location.pathname !== "/Login.html") {
+        window.location.href = "Login.html";
+    }
+}
+function redirigirATienda() {
+    if (window.location.pathname !== "/Tienda.html") {
+        window.location.href = "Tienda.html";
+    }
+}
+function redirigirARegister() {
+    if (window.location.pathname !== "/Register.html") {
+        window.location.href = "Register.html";
+    }
+}
+function redirigirAIndex() {
+    if (window.location.pathname !== "/Index.html") {
+        window.location.href = "Index.html";
+    }
+}
 function cerrarSession() {
     var token = localStorage.getItem('token');
     if (token) {
@@ -50,38 +70,8 @@ function verificarSesion() {
         redirigirALogin();
         return;
     }
-    $.ajax({
-        type: 'GET',
-        url: '/dsaApp/game/verificarToken',
-        headers: {
-            'Authorization': 'Bearer ' + token
-        },
-        success: function(result) {
-
-        },
-        error: function(error) {
-            redirigirALogin();
-        }
-    });
-}
-function redirigirALogin() {
-    if (window.location.pathname !== "/Login.html") {
-        window.location.href = "Login.html";
-    }
-}
-function redirigirATienda() {
-    if (window.location.pathname !== "/Tienda.html") {
-        window.location.href = "Tienda.html";
-    }
-}
-function redirigirARegister() {
-    if (window.location.pathname !== "/Register.html") {
-        window.location.href = "Register.html";
-    }
-}
-function redirigirAIndex() {
-    if (window.location.pathname !== "/Index.html") {
-        window.location.href = "Index.html";
+    else {
+        return;
     }
 }
 function registrar() {
@@ -95,7 +85,7 @@ function registrar() {
             contentType: "application/json",
             type: 'POST',
             url: '/dsaApp/game/registrarUsuario',
-            data: JSON.stringify({"nombre": username, "correo":email, "password": password}),
+            data: JSON.stringify({"nombre": username, "correo": email, "password": password}),
             dataType: 'json',
             success: function (result) {
                 redirigirALogin();
@@ -108,8 +98,7 @@ function registrar() {
                     alert("Usuario o contraseña ya estan siendo usados, prueba de nuevo!");
             }
         });
-    }
-    else alert("Comprueba que las dos contraseñas son iguales.");
+    } else alert("Comprueba que las dos contraseñas son iguales.");
 }
 function listadeObjetos() {
     var token = localStorage.getItem('token');
@@ -119,10 +108,10 @@ function listadeObjetos() {
     }
     $("#tcuerpo").empty();
     $.ajax({
-        type:'GET',
-        url:"/dsaApp/game/listaObjetos",
-        dataType:'json',
-        success:function (result) {
+        type: 'GET',
+        url: "/dsaApp/game/listaObjetos",
+        dataType: 'json',
+        success: function (result) {
             for (let i = 0; i < result.length; i++) {
                 console.log("i: " + i, result[i]);
                 $("#tabla").append(
@@ -137,4 +126,4 @@ function listadeObjetos() {
             console.log(error);
         }
     });
-}
+}*/
