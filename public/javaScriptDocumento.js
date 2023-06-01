@@ -19,7 +19,7 @@ function cerrarSession() {
         });
     } else {
         localStorage.removeItem('token');
-        irLogin();
+        redirigirALogin();
     }
 }
 function logear(){
@@ -33,8 +33,7 @@ function logear(){
         dataType: 'json',
         success: function(result){
             localStorage.setItem('token', result.token);
-            redirigirATienda();
-            alert("Login correcto.")
+            redirigirATienda()
         },
         error: function(error){
             if (correo == "" || password == "")
@@ -139,20 +138,3 @@ function listadeObjetos() {
         }
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
