@@ -3,6 +3,11 @@ function redirigirAIndexR() {
         window.location.href = "Index.html";
     }
 }
+function redirigirALoginR() {
+    if (window.location.pathname !== "/Login.html") {
+        window.location.href = "Login.html";
+    }
+}
 function registrar() {
     var username = $('#usuario').val();
     var password = $('#contrasena').val();
@@ -17,7 +22,7 @@ function registrar() {
             data: JSON.stringify({"nombre": username, "correo": email, "password": password}),
             dataType: 'json',
             success: function (result) {
-                redirigirALogin();
+                redirigirALoginR();
             },
             error: function (error) {
                 console.log(error);
