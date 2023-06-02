@@ -1,8 +1,3 @@
-function redirigirAIndexL() {
-    if (window.location.pathname !== "/Index.html") {
-        window.location.href = "Index.html";
-    }
-}
 function redirigirATiendaL() {
     if (window.location.pathname !== "/Tienda.html") {
         window.location.href = "Tienda.html";
