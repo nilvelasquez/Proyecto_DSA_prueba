@@ -14,12 +14,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="jsLogin.js"></script>
     <style>
-        #inicio {
-            background-color: darkgreen;
-            color: white;
-            max-width: 400px;
-            margin: auto;
-        }
         body{
             min-height: 100vh;
             background-image: url("login.jpg");
@@ -31,9 +25,10 @@
     </style>
     <style>
         .button {
-            background-color: saddlebrown;
+            background-color: #90cb30;
             border: none;
             color: white;
+            border-radius: 5px;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -51,7 +46,6 @@
         }
         body{
             min-height: 100vh;
-
         }
         nav{
             position: fixed;
@@ -59,7 +53,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            height: 70px;
+            height: 130px;
             background: #008b7f;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
             z-index: 99;
@@ -81,7 +75,7 @@
             font-weight: 600;
         }
         nav .navbar .nav-links{
-            line-height: 70px;
+            line-height: 130px;
             height: 100%;
         }
         nav .navbar .links{
@@ -120,6 +114,31 @@
                 font-size: 15px;
             }
         }
+        @media (min-width:1281px) {
+            nav .navbar{
+                max-width: 100%;
+                padding: 0 25px;
+            }
+            nav .navbar .logo a{
+                font-size: 27px;
+            }
+            nav .navbar .links li{
+                padding: 0 10px;
+                white-space: nowrap;
+            }
+            nav .navbar .links li a{
+                font-size: 15px;
+            }
+        }
+        #registro {
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            background-color: #008b7f;
+            padding: 20px;
+            max-width: 300px;
+            margin-left: 1250px;
+        }
     </style>
 </head>
 <body>
@@ -142,23 +161,25 @@
 <br>
 <br>
 <br>
-<div id="registro" class="container text-right">
-    <label for="email">Correo</label>
+<br>
+<br>
+<div id="registro" class="container text-center">
+    <label for="email" style="color:rgb(255,255,255);">Correo</label>
     <br>
     <input id="email" placeholder="Correo">
     <br>
     <br>
-    <label for="usuario">Usuario</label>
+    <label for="usuario" style="color:rgb(255,255,255);">Usuario</label>
     <br>
     <input id="usuario"  placeholder="Usuario">
     <br>
     <br>
-    <label for="contrasena">Contraseña</label>
+    <label for="contrasena" style="color:rgb(255,255,255);">Contraseña</label>
     <br>
     <input id="contrasena" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
     <br>
     <br>
-    <label for="contrasena2">Repetir Contraseña</label>
+    <label for="contrasena2" style="color:rgb(255,255,255);">Repetir Contraseña</label>
     <br>
     <input id="contrasena2" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
     <br>
