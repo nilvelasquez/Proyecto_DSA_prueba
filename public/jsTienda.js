@@ -1,3 +1,4 @@
+verificarSesion();
 function redirigirALoginT() {
     if (window.location.pathname !== "/Login.html") {
         window.location.href = "Login.html";
@@ -62,5 +63,24 @@ function cerrarSession() {
     } else {
         localStorage.removeItem('token');
         redirigirALoginT();
+    }
+}
+function comprarItem(item) {
+    var userName = localStorage.getItem("activeUser");
+    var idItem = item;
+    if (confirm("Seguro que quieres comprar este item?") == true) {
+        $.ajax({
+            type: 'PUT',
+            url: "dsaApp/item/PurchaseItem/" + idItem + "/" + userName,
+            dataType: 'json',
+            success: function (result) {
+                localStorage.setItem("coins", result.coins);
+                window.location.href = "Tienda.html";
+                alert('Bought succesfully');
+            },
+            error: function (error) {
+                alert('Purchase failed');
+            },
+        })
     }
 }

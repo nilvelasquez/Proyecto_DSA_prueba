@@ -1,6 +1,17 @@
+verificarSesion();
 function redirigirALoginM() {
     if (window.location.pathname !== "/Login.html") {
         window.location.href = "Login.html";
+    }
+}
+function verificarSesion() {
+    var token = localStorage.getItem('token');
+    if (!token) {
+        redirigirALoginM();
+        return;
+    }
+    else {
+        return;
     }
 }
 function cerrarSession() {
