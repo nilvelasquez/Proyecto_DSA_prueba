@@ -1,8 +1,3 @@
-function redirigirATiendaL() {
-    if (window.location.pathname !== "/Tienda.html") {
-        window.location.href = "Tienda.html";
-    }
-}
 function logear(){
     var correo = $('#usuario').val();
     var password = $('#contrasena').val();
@@ -14,7 +9,7 @@ function logear(){
         dataType: 'json',
         success: function(result){
             localStorage.setItem('token', result.token);
-            redirigirATiendaL()
+            window.location.href = "main.html"
         },
         error: function(error){
             if (correo == "" || password == "")

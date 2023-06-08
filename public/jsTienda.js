@@ -1,4 +1,3 @@
-//verificarSesion();
 function redirigirALoginT() {
     if (window.location.pathname !== "/Login.html") {
         window.location.href = "Login.html";
